@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors! - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <h2>Let the games begin!</h2>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    <footer>
+        <p>Rock, Paper, Scissors&copy;</p>
+        <p>by David Strain 2020</p>
+    </footer>
+</body>
+</html>
