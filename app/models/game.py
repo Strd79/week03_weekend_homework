@@ -1,4 +1,4 @@
-from player import Player
+from app.models.player import Player
 
 class Game:
     
@@ -20,5 +20,5 @@ class Game:
         elif self.player_1.choice == "Scissors" and self.player_2.choice == "Rock":
             return f"Player 2 WINS with {self.player_2.choice}!"
         else:
-            return "It's a draw, play again!"
+            return "It's a DRAW, play again!"
         
