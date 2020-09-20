@@ -6,10 +6,12 @@
         <section>
             <h4>Player 2</h4>
             <p>Make your selection:</p>
-            <form action="/player_2/{{ player_1_selection }}/{{ id }}" method="POST">
-                <input type="submit" name="rock" id="rock" value="Rock">
-                <input type="submit" name="paper" id="paper" value="Paper">
-                <input type="submit" name="scissors" id="scissors" value="Scissors">
+            <form action="/player_2" method="POST">
+                <label for="name">Player 2's name:</label><br>
+                <input type="text" name="name" id="name"><br><br>
+                <label for="choice">Play either "Rock", "Paper" or "Scissors":</label><br>
+                <input type="text" name="choice" id="choice"><br><br>
+                <input type="submit" value="Submit">
             </form>
         </section>
     </main>
