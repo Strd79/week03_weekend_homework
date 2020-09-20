@@ -1,10 +1,14 @@
-from app.models.player import Player
+from app.models.player import *
 
 class Game:
     
     def __init__(self, input_player_1, input_player_2):
         self.player_1 = input_player_1
         self.player_2 = input_player_2
+        self.players = []
+
+    def add_player(self, player):
+        self.players.append(player)
 
     def who_wins(self, player_1, player_2):
         if self.player_1.choice == "Rock" and self.player_2.choice == "Scissors":
