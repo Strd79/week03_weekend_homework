@@ -9,17 +9,17 @@ def index():
 
 @app.route("/player_1", methods=["POST"])
 def player_2s_go():
-    player1Name = request.form["name"]
-    player1Choice = request.form["choice"]
+    player1Name = request.form["name1"]
+    player1Choice = request.form["choice1"]
     player_1 = Player(player1Name, player1Choice)
-    add_player(player_1)
+    Game.add_player(player_1)
     return render_template("index2.html", title="Player 2")
 
 @app.route("/player_2", methods=["POST"])
 def the_winner_is():
-    player2Name = request.form["name"]
-    player2Choice = request.form["choice"]
+    player2Name = request.form["name2"]
+    player2Choice = request.form["choice2"]
     player_2 = Player(player2Name, player2Choice)
-    add_player(player_2)
-    result = who_wins(Game.players)
+    Game.add_player(player_2)
+    result = Game.who_wins(Game.players)
     return render_template("index3.html", title="The Winner!", result=result)
