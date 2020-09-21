@@ -6,7 +6,7 @@ class Game:
         self.player_1 = input_player_1
         self.player_2 = input_player_2
 
-    def who_wins(self, player_1, player_2):
+    def who_wins():
         if self.player_1.choice == "Rock" and self.player_2.choice == "Scissors":
             return f"Player 1 WINS with {self.player_1.choice}!"
         elif self.player_1.choice == "Rock" and self.player_2.choice == "Paper":
